@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+body, div, label, a, small {
+    font-family: $font-family;
+    font-style: $font-style;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family;
+    font-weight: $heading-font-weight;
+    font-style: $font-style;
+}
+
+a {
+    font-size: $link-font-size;
+    font-weight: $link-font-weight;
+    line-height: $link-line-height;
+    color: $link;
+    &:hover {
+        color: $link-hover-color;
+    }
+    cursor: pointer;
+}
+
+div {
+    font-size: $body-font-size;
+    font-weight: $body-font-weight;
+    line-height: $body-line-height;
+    color: $body-color;
+}
+
+label {
+    font-size: $label-font-size;
+    font-weight: $label-font-weight;
+    line-height: $label-line-height;
+}
+
+small {
+    font-size: $small-font-size;
+    font-weight: $small-font-weight;
+    line-height: $small-line-height;
+    color: $small-color;
+}
+
+@each $heading, $font-size in $font-sizes {
+    h#{$heading} {
+        @include media-breakpoint-up(lg) { 
+            font-size: $font-size;
+            line-height: nth($line-heights, $heading);
+         }
+        @include media-breakpoint-down(md) {
+             font-size: nth($font-sizes-md, $heading);
+             line-height: nth($line-heights-md, $heading);
+         }
+        @include media-breakpoint-down(sm) {
+            font-size: nth($font-sizes-sm, $heading);
+            line-height: nth($line-heights-sm, $heading);
+        }
+    }
+}

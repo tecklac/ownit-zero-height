@@ -1,0 +1,254 @@
+// COLORS
+
+$white:    #fff;
+$gray-200: #F7FAFA;
+$gray-300: #D5DBDB;
+$gray-500: #A8AFB4;
+$gray-700: #565A59;
+$gray-900: #0F1111;
+$black:    #000;
+
+$midnight-100: #EAEDED;
+$midnight-500: #37475A;
+$midnight-700: #232F3E;
+$midnight-900: #0F1111;
+
+$primary:       #FFD814; // Main button
+$primary-500:       #F7CA00; // Main button hover
+
+$secondary:     #FCBB6A; // Search button at the header input
+$secondary-300:     #FFA41C; // One click button
+$secondary-500:     #FA8900; // One click button hover
+$secondary-700:     #C7511F; // Links hover
+
+$link:          #007185;
+$success:       #007700;
+$alert:        #B12904;
+
+$best-seller: rgb(250, 137, 0);
+$new:         rgb(199, 81, 31);
+$promotional: rgb(127, 218, 105);
+
+$border-color: $gray-300;
+$border-style: solid;
+$border-radius: 4px;
+
+$link-font-size: 14px;
+$link-font-weight: 600;
+$link-line-height: 20px;
+$link-hover-color: $secondary-700;
+
+$body-font-size: 14px;
+$body-font-weight: 400;
+$body-line-height: 24px;
+$body-color: $gray-900;
+
+$label-font-size: 12px;
+$label-font-weight: 700;
+$label-line-height: 17px;
+$label-color: $gray-700;
+
+$small-font-size: 12px;
+$small-font-weight: 400;
+$small-line-height: 17px;
+$small-color: $gray-700;
+
+// BREAKPOINTS, GRID, CONTAINER, SPACING
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 375px,
+  md: 768px,
+  lg: 1200px,
+  xl: 1440px,
+);
+
+$container-max-widths: (
+  sm: 375px,
+  md: 720px,
+  lg: 1140px,
+  xl: 1366px,
+);
+
+$grid-columns: 12;
+$grid-gutter-width: 0.5rem;
+$grid-row-columns: 6;
+$container-padding-x: $grid-gutter-width;
+$grid-row-columns:            6;
+
+$spacer: 16px;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+$position-values: (
+  0: 0,
+  50: 50%,
+  100: 100%
+);
+
+// BTN
+$btn-text-color: $gray-900;
+$btn-width: fit-content;
+$btn-cursor: pointer;
+$btn-padding-x: 1.5rem; //24px
+$btn-padding-y: 0rem;
+$btn-font-family: "Lato";
+$btn-font-size: 14px;
+$btn-font-style: Bolder;
+$btn-font-weight: 700;
+$btn-line-height: .625rem;
+$btn-border-radius: 4px;
+$btn-border-color: $gray-300;
+$btn-height: 38px;
+$btn-white-space: nowrap;
+
+// TYPOGRAPHY
+$base-size: 16px;
+$font-sizes: (
+  1: $base-size * 2.125,
+  2: $base-size * 1.5,
+  3: $base-size * 1.125,
+  4: $base-size * 0.875,
+  5: $base-size * 0.75,
+  6: $base-size * 0.625,
+);
+$line-heights: (
+  48px,
+  32px,
+  24px,
+  24px,
+  24px,
+  24px,
+);
+$font-sizes-md: (
+  $base-size * 1.875,
+  $base-size * 1.375,
+  $base-size * 1.125,
+  $base-size * 0.875,
+  $base-size * 0.75,
+  $base-size * 0.625,
+);
+$line-heights-md: (
+  42px,
+  32px,
+  24px,
+  24px,
+  24px,
+  24px,
+);
+$font-sizes-sm: (
+  $base-size * 1.75,
+  $base-size * 1.25,
+  $base-size * 1.125,
+  $base-size * 0.875,
+  $base-size * 0.75,
+  $base-size * 0.625,
+);
+$line-heights-sm: (
+  40px,
+  32px,
+  22px,
+  24px,
+  24px,
+  24px,
+);
+$heading-font-weight: 700;
+$font-style: normal;
+$font-family: Lato;
+
+// ICONS
+$icons: (
+  url("../../assets/chevron-up.svg"),
+  url("../../assets/chevron-down.svg"),
+  url("../../assets/chevron-left.svg"),
+  url("../../assets/chevron-right.svg"),
+  url("../../assets/heart.svg"),
+  url("../../assets/menu.svg"),
+  url("../../assets/search.svg"),
+  url("../../assets/shopping-cart.svg"),
+  url("../../assets/user.svg"),
+  url("../../assets/add-alt.svg"),
+  url("../../assets/map-pin.svg"),
+  url("../../assets/alert-circle.svg"),
+  url("../../assets/list.svg"),
+  url("../../assets/x.svg"),
+  url("../../assets/file-plus.svg"),
+);
+
+$icons-names: (
+  1:'chevron-up',
+  2:'chevron-down',
+  3:'chevron-left',
+  4:'chevron-right',
+  5:'heart',
+  6:'menu',
+  7:'search',
+  8:'shopping-cart',
+  9:'user',
+  10:'add-alt',
+  11:'map-pin',
+  12:'alert-circle',
+  13:'list',
+  14:'x',
+  15:'file-plus',
+);
+
+$icons-cyan: (
+  url("../../assets/chevron-up-cyan.svg"),
+  url("../../assets/chevron-down-cyan.svg"),
+  url("../../assets/chevron-left-cyan.svg"),
+  url("../../assets/chevron-right-cyan.svg"),
+  url("../../assets/heart-cyan.svg"),
+  url("../../assets/menu-cyan.svg"),
+  url("../../assets/search-cyan.svg"),
+  url("../../assets/shopping-cart-cyan.svg"),
+  url("../../assets/user-cyan.svg"),
+  url("../../assets/add-alt-cyan.svg"),
+  url("../../assets/map-pin-cyan.svg"),
+  url("../../assets/alert-circle-cyan.svg"),
+  url("../../assets/list-cyan.svg"),
+  url("../../assets/x-cyan.svg"),
+  url("../../assets/file-plus-cyan.svg"),
+);
+
+$icons-secondary: (
+  url("../../assets/chevron-up-secondary.svg"),
+  url("../../assets/chevron-down-secondary.svg"),
+  url("../../assets/chevron-left-secondary.svg"),
+  url("../../assets/chevron-right-secondary.svg"),
+  url("../../assets/heart-secondary.svg"),
+  url("../../assets/menu-secondary.svg"),
+  url("../../assets/search-secondary.svg"),
+  url("../../assets/shopping-cart-secondary.svg"),
+  url("../../assets/user-secondary.svg"),
+  url("../../assets/add-alt-secondary.svg"),
+  url("../../assets/map-pin-secondary.svg"),
+  url("../../assets/alert-circle-secondary.svg"),
+  url("../../assets/list-secondary.svg"),
+  url("../../assets/x-secondary.svg"),
+  url("../../assets/file-plus-secondary.svg"),
+);
+
+$icons-gray: (
+  url("../../assets/chevron-up-secondary.svg"),
+  url("../../assets/chevron-down-secondary.svg"),
+  url("../../assets/chevron-left-secondary.svg"),
+  url("../../assets/chevron-right-secondary.svg"),
+  url("../../assets/heart-secondary.svg"),
+  url("../../assets/menu-secondary.svg"),
+  url("../../assets/search-secondary.svg"),
+  url("../../assets/shopping-cart-secondary.svg"),
+  url("../../assets/user-secondary.svg"),
+  url("../../assets/add-alt-secondary.svg"),
+  url("../../assets/map-pin-secondary.svg"),
+  url("../../assets/alert-circle-secondary.svg"),
+  url("../../assets/list-secondary.svg"),
+  url("../../assets/x-gray.svg"),
+  url("../../assets/file-plus-secondary.svg"),
+);

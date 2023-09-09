@@ -1,0 +1,39 @@
+
+<link rel="stylesheet" href="../../main.css">
+<link rel="stylesheet" href="../../node_modules/intl-tel-input/build/css/intlTelInput.css">
+
+<div class="input-tel invalid">
+  <div for="exampleFormControlInput1" class="form-label">Label</div>
+  <div class="input-holder">
+    <input type="tel" class="form-control" id="phone" placeholder="000 000 000" data-bs-toggle="dropdown" separateDialCode="true">
+    <div class="input-icon icon icon-right icons-x-gray" data-bs-toggle="dropdown"></div>
+  </div>
+  <div class="w-100"></div>
+  <label class="inputs-error">Error message</label>
+  <label for="exampleFormControlInput1" class="form-desc">Informative Message</label>
+</div>
+
+<div style="margin: 35px"></div>
+
+<div class="input-tel">
+  <div for="exampleFormControlInput2" class="form-label">Label</div>
+  <div class="input-holder">
+    <input type="tel" class="form-control" id="phone2" placeholder="000 000 000" data-bs-toggle="dropdown2" separateDialCode="true">
+    <div class="input-icon icon icon-right icons-x-gray" data-bs-toggle="dropdown"></div>
+  </div>
+  <div class="w-100"></div>
+  <label class="inputs-error">Error message</label>
+  <label for="exampleFormControlInput2" class="form-desc">Informative Message</label>
+</div>
+
+<script src="../../node_modules/intl-tel-input/build/js/intlTelInput.js"></script>
+<script type="module">
+  var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      separateDialCode: true,
+  });
+  var input = document.querySelector("#phone2");
+    window.intlTelInput(input, {
+      separateDialCode: true,
+  });
+</script>

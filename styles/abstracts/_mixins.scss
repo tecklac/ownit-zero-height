@@ -1,0 +1,145 @@
+@mixin background-color($bg-color) {
+    background-color: $bg-color;
+}
+
+@mixin background-border-colors($bg-color, $border-color) {
+    @include background-color($bg-color);
+    border-color: $border-color;
+}
+
+@mixin text-color($color) {
+    color: $color;
+}
+
+@mixin text-config($font-size, $font-weight, $line-height) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+
+}
+
+@mixin max-size($Xmin-size, $Xmax-size, $Ymin-size, $Ymax-size) {
+    min-width: $Xmin-size;
+    max-width: $Xmax-size;
+    min-height: $Xmin-size;
+    max-height: $Xmax-size;
+}
+
+@mixin background-size($size) {
+    background-size: $size;
+}
+
+@mixin button-height($height) {
+    height: $height;
+    max-height: $height;
+    display: flex;
+    line-height: 0;
+    align-items: center;
+}
+
+@mixin paddings-config($pt, $pe, $pb, $ps) {
+    padding-top: $pt;
+    padding-right: $pe;
+    padding-bottom: $pb;
+    padding-left: $ps;
+}
+
+@mixin position($pos) {
+    position: $pos;
+}
+
+@mixin background-position($x, $x-space, $y, $y-space) {
+    @if $y ==center {
+        background-position: $x $x-space $y;
+    }
+
+    @else {
+        background-position: $x $x-space $y $y-space;
+    }
+}
+
+@mixin axisX($direction, $value) {
+    @if $direction ==right {
+        right: $value;
+    }
+
+    @else if $direction ==left {
+        right: $value;
+    }
+}
+
+@mixin icon-config($icon-size, $icon-position, $top, $right, $centerY) {
+    width: $icon-size;
+    height: $icon-size;
+    position: $icon-position;
+    top: $top;
+
+    @if $centerY ==center {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    cursor: pointer;
+}
+
+//custom
+
+@mixin make-background-config($x, $x-space, $y, $y-space, $size) {
+    @include background-position($x, $x-space, $y, $y-space);
+    @include background-size($size);
+}
+
+@mixin make-borders($width, $style, $color) {
+    border: $width $style $color;
+}
+
+@mixin make-label-borders-radius($radius-left-top, $radius-right-top, $radius-right-bottom, $radius-left-bottom) {
+    border-radius: $radius-left-top $radius-right-top $radius-right-bottom $radius-left-bottom;
+}
+
+@mixin make-badge($width, $height, $padding, $line-height, $color) {
+    width: $width;
+    height: $height;
+    padding: $padding;
+    line-height: $line-height;
+    color: $color;
+}
+
+@mixin make-input-element($display, $align-items, $text-align) {
+    display: $display;
+    align-items: $align-items;
+    text-align: $text-align;
+}
+
+@mixin make-btn() {
+    width: $btn-width;
+    @include button-height($btn-height);
+    padding: $btn-padding-y $btn-padding-x;
+    color: $btn-text-color;
+    font-family: $btn-font-family;
+    font-style: $btn-font-style;
+    font-size: $btn-font-size;
+    font-weight: $btn-font-weight;
+    line-height: $btn-line-height;
+    border-radius: $btn-border-radius;
+    white-space: $btn-white-space;
+    align-items: center;
+    cursor: $btn-cursor;
+    border: 1px solid $btn-border-color;
+}
+
+@mixin tablet {
+    $medium: map-get($grid-breakpoints , 'lg');
+    @media (min-width: 0) and (max-width: #{$medium}) {
+        @content;
+    }
+}
+
+
+
+@mixin mobile {
+    $x-small: map-get($grid-breakpoints , 'md');
+    @media (min-width: 0) and (max-width: #{$x-small}) {
+        @content;
+    }
+}
